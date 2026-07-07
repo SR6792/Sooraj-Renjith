@@ -1,0 +1,28 @@
+*{
+    background-color: #505050;
+    color:white;
+}
+.d1{
+    display:flex;
+    gap:40px;
+    justify-content: center;
+    align-items: center;
+    height:100vh;
+}
+
+.d2 {
+    height: 200px;
+    width:200px;
+    border-radius: 20px;
+    overflow:hidden;
+}
+
+.d2 img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+
+.p1{
+    font-size: 20px;
+}
