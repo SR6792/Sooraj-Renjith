@@ -1,94 +1,184 @@
-body{
-    background-color: #505050;
-    color:white;
-    padding:20px;
+* {
+  box-sizing: border-box;
 }
+
+body {
+  background-color: #505050;
+  color: white;
+  padding: 20px;
+  margin: 0;
+  line-height: 1.6;
+}
+
 :root {
   font-family: Inter, sans-serif;
-  font-feature-settings: 'liga' 1, 'calt' 1; /* fix for Chrome */
+  font-feature-settings: 'liga' 1, 'calt' 1;
 }
+
 @supports (font-variation-settings: normal) {
-  :root { font-family: InterVariable, sans-serif; }
+  :root {
+    font-family: InterVariable, sans-serif;
+  }
 }
-.d1{
-    display:flex;
-    gap:40px;
-    justify-content: center;
-    align-items: center;
-    height:100vh;
+
+.d1 {
+  display: flex;
+  gap: 40px;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px 0;
 }
 
 .d2 {
-    height: 200px;
-    width:200px;
-    border-radius: 20px;
-    overflow:hidden;
+  height: 200px;
+  width: 200px;
+  border-radius: 20px;
+  overflow: hidden;
+  flex-shrink: 0;
 }
 
-.d2 img{
-    width:100%;
-    height:100%;
-    object-fit:cover;
+.d2 img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
-.p1{
-    font-size: 20px;
-}
-.Background{
-    display: flex;
-    gap:30px;
+.p1 {
+  font-size: 20px;
 }
 
-.bg1{
-    color:black;
-    background-color: white;
-    border:2px solid black;
-    border-radius: 20px;
-    padding:20px;
+.Background {
+  display: flex;
+  gap: 30px;
+  margin: 30px 0;
 }
 
-.bg2{
-    color:black;
-    background-color: white;
-    border:2px solid black;
-    border-radius: 20px;
-    padding:20px;
+.bg1,
+.bg2 {
+  color: black;
+  background-color: white;
+  border: 2px solid black;
+  border-radius: 20px;
+  padding: 20px;
+  flex: 1;
 }
 
-.pro{
-    border:2px solid black;
-    background-color: white;
-    color:black;
-    display: flex;
-    gap:20px;
-    padding:20px;
-    border-radius: 20px;
+.pro {
+  border: 2px solid black;
+  background-color: white;
+  color: black;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  padding: 20px;
+  border-radius: 20px;
 }
 
-a{
-    color:black;
+a {
+  color: black;
 }
 
-.link{
-    display: flex;
-    gap:20px;
+.link {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-top: 12px;
 }
 
-.pro1,.pro2,.pro3{
-    border: 2px solid black;
-    border-radius: 20px;
-    padding:20px;
+.link button,
+.link a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 12px;
+  border-radius: 8px;
+  border: 1px solid #000;
+  text-decoration: none;
+  background-color: #f3f3f3;
 }
 
-.cont1{
-    display: flex;
-    gap:20px;
+.pro1,
+.pro2,
+.pro3 {
+  border: 2px solid black;
+  border-radius: 20px;
+  padding: 20px;
 }
 
-.tech1{
-    background-color: white;
-    color:black;
-    border: 2px solid black;
-    border-radius: 20px;
-    padding:20px;
+.cont1 {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.tech1 {
+  background-color: white;
+  color: black;
+  border: 2px solid black;
+  border-radius: 20px;
+  padding: 20px;
+}
+
+@media (max-width: 768px) {
+  body {
+    padding: 12px;
+  }
+
+  .d1 {
+    flex-direction: column;
+    gap: 20px;
+    min-height: auto;
+    text-align: center;
+  }
+
+  .d2 {
+    height: 160px;
+    width: 160px;
+  }
+
+  .Background {
+    flex-direction: column;
+    gap: 16px;
+    margin: 20px 0;
+  }
+
+  .pro {
+    grid-template-columns: 1fr;
+    padding: 16px;
+  }
+
+  .cont1 {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .link {
+    gap: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    padding: 10px;
+  }
+
+  .d2 {
+    height: 140px;
+    width: 140px;
+  }
+
+  .bg1,
+  .bg2,
+  .pro1,
+  .pro2,
+  .pro3,
+  .tech1 {
+    padding: 16px;
+  }
+
+  .link button,
+  .link a {
+    width: 100%;
+  }
 }
